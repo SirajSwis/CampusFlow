@@ -75,8 +75,14 @@ WSGI_APPLICATION = 'compusf1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mssql',
+        'NAME': 'team18',
+        'HOST': 'localhost\SQLEXPRESS',  
+        'PORT': '',          
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+            'trusted_connection': 'yes',  
+        },
     }
 }
 
